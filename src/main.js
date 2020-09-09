@@ -9,7 +9,13 @@ import './assets/font/iconfont.css'
 //引入bootstrap
 import 'bootstrap'
 //引入jquery
-import $ from 'jquery'
+//跨域
+//导入axios
+import axios from "axios";
+//挂载
+Vue.prototype.$http= axios
+//设置访问路径
+axios.defaults.baseURL="http://localhost:9000"
 
 Vue.config.productionTip = false
 
