@@ -75,6 +75,7 @@ export default 只能导出一个默认模块，这个模块可以匿名-->
                             center:true
                         });
                         window.sessionStorage.setItem("user",res.user)
+                        window.sessionStorage.setItem("username",res.roler)
                         await this.$router.push({
                             path: "/home",
                         });

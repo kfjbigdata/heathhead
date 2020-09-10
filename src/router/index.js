@@ -4,6 +4,10 @@ import VueRouter from 'vue-router'
 import Login from "../components/Login";
 //引入home组建
 import Home from "../components/Home"
+//引入wlcome组建
+import Welcome from "../components/Welcome"
+//引入内容admin组建
+import UserList from "../components/admin/UserList"
 
 Vue.use(VueRouter)
 
@@ -18,7 +22,12 @@ const routes = [
     },
     {
         path: "/home",
-        component: Home
+        component: Home,
+        redirect: "/welcome",
+        children: [
+            {path: "/welcome", component: Welcome,},
+            {path: "/user", component: UserList,}
+        ]
     }
 ]
 
